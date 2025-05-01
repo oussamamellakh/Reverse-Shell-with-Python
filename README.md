@@ -49,7 +49,15 @@ user
 $
 ```
 
-Now you have control over the target machine's shell.
+### Upgrading to Interactive Shell
+
+To upgrade your shell to a fully interactive terminal, use:
+
+```bash
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+```
+
+This command gives you a more usable shell environment.
 
 ## Warning
 Use this knowledge responsibly and ethically. Unauthorized use of this method is illegal and unethical.
