@@ -1,4 +1,4 @@
-# Reverse Shell with Python and Netcat
+# Reverse Shell with Python
 
 This guide shows you how to set up a simple reverse shell using Python on the target machine and Netcat on the attacker machine.
 
